@@ -150,7 +150,7 @@ Click the **ANĀMAVĀK** logo **7 times** to unlock the secret key panel.
 Enter your **11-digit numeric key** (e.g., `12345678901`).
 This is your **vault identifier and encryption key** — it must be the same across devices.
 
-![Secret Key Entry](docs/Secret_key.png)
+![Secret Key Entry](docs/Secret key.png)
 
 ---
 
@@ -173,7 +173,7 @@ Files are encrypted with AES-256 and stored securely.
 * Click on files to download.
 * Decryption happens locally with your vault key.
 
-![File Upload](docs/File_upload.png)
+![File Upload](docs/File upload.png)
 
 ---
 
