@@ -131,7 +131,7 @@ python cybervault_v3.py
 
 You'll see network URLs and a QR code for mobile access.
 
-![Start Server](docs/start.png)
+![Start Server](docs/Start.png)
 
 ---
 
@@ -141,7 +141,7 @@ Open your browser to `http://127.0.0.1:PORT` or your LAN IP.
 
 Click the **ANĀMAVĀK** logo **7 times** to unlock the secret key panel.
 
-![Home Screen](docs/homescreen.png)
+![Home Screen](docs/Homescreen.png)
 
 ---
 
@@ -150,7 +150,7 @@ Click the **ANĀMAVĀK** logo **7 times** to unlock the secret key panel.
 Enter your **11-digit numeric key** (e.g., `12345678901`).
 This is your **vault identifier and encryption key** — it must be the same across devices.
 
-![Secret Key Entry](docs/secret_key.png)
+![Secret Key Entry](docs/Secret_key.png)
 
 ---
 
@@ -161,7 +161,7 @@ You're now inside your encrypted vault. Start messaging in real-time!
 * Messages are encrypted using your 11-digit key.
 * Only users with the **same key** can view or send messages.
 
-![Interface](docs/interface.png)
+![Interface](docs/Interface.png)
 
 ---
 
@@ -173,7 +173,7 @@ Files are encrypted with AES-256 and stored securely.
 * Click on files to download.
 * Decryption happens locally with your vault key.
 
-![File Upload](docs/file_upload.png)
+![File Upload](docs/File_upload.png)
 
 ---
 
@@ -182,7 +182,7 @@ Files are encrypted with AES-256 and stored securely.
 Click **EXIT** in the top-right corner to logout.
 This ends the session and clears the key from memory.
 
-![Logout](docs/logout.png)
+![Logout](docs/Logout.png)
 
 ---
 
