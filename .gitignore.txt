@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# SQLite Database
+*.sqlite3
+*.db
+
+# Uploaded files (optional - if you store uploaded files in a folder like uploads/)
+uploads/
+
+# QR code image (if dynamically generated and saved)
+qr.png
+
+# VSCode settings
+.vscode/
+
+# PyInstaller
+*.spec
+dist/
+build/
+
+# IDEs
+.idea/
+*.iml
+
+# dotenv
+.env
