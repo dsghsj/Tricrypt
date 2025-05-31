@@ -1,4 +1,9 @@
+Here's the complete updated `README.md` with detailed usage instructions **and the six integrated screenshots**. Each step references an image from your `docs/` folder and explains the app visually and clearly.
+
+---
+
 # 🔐 TriCrypt
+
 **Secure Real-Time Messaging & File Vault with Triple-Layer Encryption**
 
 ![Version](https://img.shields.io/badge/version-3.0-blue.svg)
@@ -9,40 +14,44 @@
 
 ## 📖 Overview
 
-**TriCrypt** is a cyber-secure, real-time communication system with encrypted file transfer. It uses a **triple-layer encryption model**:
-- Morse Code 🕵️ (Obfuscation)
-- AES-256 🧊 (Encryption)
-- HMAC 🧷 (Integrity Check)
+**TriCrypt** is a privacy-first, real-time communication and file transfer system that leverages:
 
-No user accounts. Just an **11-digit key**. Fast, secure, and simple.
+* 🔐 **Triple-layer encryption**: Morse Code → AES-256 → HMAC
+* ⚡ **Real-time communication** via WebSockets
+* 🧱 **Zero user accounts**: Just an 11-digit secure key
+* 📂 **Encrypted file vault**
+* 🖥️ **Retro terminal-style web interface**
+* 📱 **Mobile access via QR code**
 
 ---
 
 ## ✨ Features
 
-- 🔐 End-to-end encrypted real-time messaging
-- 📂 Secure file upload/download (up to 16MB)
-- 🔄 WebSocket-based instant sync
-- 🔑 11-digit numeric key access
-- 🧬 Session management & access logging
-- 📱 QR code for mobile access
-- 🎨 Terminal-style retro UI
+* 🔄 Real-time encrypted messaging
+* 📎 Secure file uploads/downloads (up to 16MB)
+* 🧠 Triple encryption: Morse obfuscation + AES + HMAC
+* 🔑 11-digit numeric access keys
+* 📜 IP/user-agent access logs
+* 📷 QR code terminal output for mobile access
+* 🧬 Session management
 
 ---
 
 ## 🧩 Tech Stack
 
-- **Python 3.7+**
-- **Flask**, **Flask-SocketIO**
-- **Cryptography**, **SQLite**
-- **qrcode** (for terminal QR codes)
-- HTML + CSS + JS (UI)
+* **Python 3.7+**
+* **Flask** + **Flask-SocketIO**
+* **SQLite3**
+* **Cryptography** for AES-256
+* **qrcode** for terminal QR
+* HTML + CSS (Retro UI)
 
 ---
 
 ## 🧰 Installation
 
 ### 🪟 Windows
+
 ```bash
 git clone https://github.com/yourusername/tricrypt.git
 cd tricrypt
@@ -52,11 +61,11 @@ venv\Scripts\activate
 
 pip install -r requirements.txt
 python cybervault_v3.py
+```
 
-Installation:
+### 🐧 Linux / macOS
 
-🐧 Linux / macOS
-
+```bash
 git clone https://github.com/yourusername/tricrypt.git
 cd tricrypt
 
@@ -65,116 +74,163 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 python3 cybervault_v3.py
+```
 
-🤖 Android (via Termux)
+### 🤖 Android (via Termux)
 
+```bash
 pkg install git python
 git clone https://github.com/yourusername/tricrypt.git
 cd tricrypt
 
 pip install -r requirements.txt
 python cybervault_v3.py
+```
 
-🚀 Getting Started
+> 🔸 Use `termux-open-url` or a mobile browser to access the local IP shown with the QR code.
 
-After running the app, you’ll see this in your terminal:
+---
 
-    ✅ App is running on http://127.0.0.1:5000
+## 🚀 Starting the App
 
-    🌐 Local network IP to access on other devices
+```bash
+python cybervault_v3.py
+```
 
-    📱 QR code to scan from your phone
+You will be prompted to enter a **custom port** (press Enter for default: `5000`).
+The terminal will then display:
 
-🧭 How to Use TriCrypt (Visual Guide)
+* Localhost URL
+* Network URL (for LAN access)
+* 📱 QR code for quick mobile connection
 
-🧷 Step 1: Start the Server
+---
 
-Run the app and choose a port (default: 5000, or enter your own like 8899).
-You’ll see local and network URLs, plus a QR code for mobile access.
+## 🧭 How to Use TriCrypt (Visual Guide)
 
-"python cybervault_v3.py"
+> 📂 Ensure the following images are located in your `docs/` folder:
 
-![start](/docs/Start.png)
+| Step | Screenshot              | Filename          |
+| ---- | ----------------------- | ----------------- |
+| 1    | Starting the Server     | `start.png`       |
+| 2    | Home Screen             | `homescreen.png`  |
+| 3    | Entering the Secret Key | `secret_key.png`  |
+| 4    | Messaging Interface     | `interface.png`   |
+| 5    | Uploading Files         | `file_upload.png` |
+| 6    | Logging Out             | `logout.png`      |
 
+---
 
+### 🧷 Step 1: Start the Server
 
-🏠 2. Home Screen
+Run the server and choose your port (e.g., `8899`).
 
-You’ll see the welcome screen titled ANĀMAVĀK v3.0.
-Click the logo 7 times to unlock the secret access panel.
+```bash
+python cybervault_v3.py
+```
 
-![Home](/docs/Homescreen.png)
+You'll see network URLs and a QR code for mobile access.
 
-🔑 3. Enter Secret Key
+![Start Server](docs/start.png)
 
-You’ll be prompted to enter an 11-digit key (e.g., 12345678901).
-This key is your personal encryption token and determines which vault you access.
+---
 
-![Secret Key](/docs/Secret%20key.png.png)
+### 🏠 Step 2: Home Screen
 
-💬 4. Secure Messaging Interface
+Open your browser to `http://127.0.0.1:PORT` or your LAN IP.
 
-Once authenticated, you’ll enter the real-time messaging interface.
-You can send text messages instantly — they’re encrypted using your key.
+Click the **ANĀMAVĀK** logo **7 times** to unlock the secret key panel.
 
-    All messages are encrypted and only accessible by people with the same key.
+![Home Screen](docs/homescreen.png)
 
-    ![Interface](/docs/Interface.png)
+---
 
-📁 5. File Upload
+### 🔑 Step 3: Enter Your Secret Key
 
-You can securely upload files (up to 16MB) which are encrypted using AES-256.
-Files are listed on the side and can be downloaded or deleted securely.
+Enter your **11-digit numeric key** (e.g., `12345678901`).
+This is your **vault identifier and encryption key** — it must be the same across devices.
 
-![start](/docs/File%20upload.png)
+![Secret Key Entry](docs/secret_key.png)
 
-🔓 6. Logout
+---
 
-To exit your vault, click EXIT in the top-right corner.
+### 💬 Step 4: Real-Time Messaging Interface
 
-    This ends your session and clears any stored access.
+You're now inside your encrypted vault. Start messaging in real-time!
 
-    ![start](/docs/Logout.png)
+* Messages are encrypted using your 11-digit key.
+* Only users with the **same key** can view or send messages.
 
-🔐 Encryption Model
+![Interface](docs/interface.png)
 
+---
+
+### 📁 Step 5: Upload a File
+
+Use the right panel to **upload files** (max: 16MB).
+Files are encrypted with AES-256 and stored securely.
+
+* Click on files to download.
+* Decryption happens locally with your vault key.
+
+![File Upload](docs/file_upload.png)
+
+---
+
+### 🔓 Step 6: Logout
+
+Click **EXIT** in the top-right corner to logout.
+This ends the session and clears the key from memory.
+
+![Logout](docs/logout.png)
+
+---
+
+## 🔐 Encryption Model
+
+```text
 Plain Text
    ↓
 Morse Code (Obfuscation)
    ↓
-AES-256 Encryption
+AES-256 Encryption (Key from 11-digit code)
    ↓
-HMAC-SHA256 (Integrity Signature)
+HMAC-SHA256 Integrity Check
+```
 
-Only the correct 11-digit key can decrypt your data.
+All encryption happens before any transmission or storage.
 
-🧪 File Upload Details
+---
 
-Maximum file size: 16 MB
+## 📱 Mobile Access
 
-Files are encrypted client-side before storage
+Scan the terminal QR code with your phone.
+Use your browser to open the vault and input your 11-digit key.
+Enjoy full access to messaging and files.
 
-Only accessible by the keyholder
+---
 
-📱 Mobile Access
+## 🤝 Contributing
 
-After launch, scan the QR code displayed in terminal using your phone.
+Pull requests welcome!
 
-    Use your phone’s browser to access your vault securely
+### Format code:
 
-    Input the same 11-digit key to access your data
-
-🤝 Contributing
-
-Pull requests are welcome! Before submitting:
-
-# Format code
+```bash
 black cybervault_v3.py
+```
 
-# Run the server
+### Run the app:
+
+```bash
 python cybervault_v3.py
+```
 
-📜 License
+---
 
-This project is licensed under the MIT License.
-Feel free to use, modify, and share responsibly.
+## 📜 License
+
+MIT License © 2025 \[Your Name]
+TriCrypt — **Silence. Secured.**
+
+---
