@@ -1,236 +1,339 @@
-Here's the complete updated `README.md` with detailed usage instructions **and the six integrated screenshots**. Each step references an image from your `docs/` folder and explains the app visually and clearly.
+# ANÄ€MAVÄ€K v4.0 🔐
 
----
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![Security](https://img.shields.io/badge/Security-Military%20Grade-red.svg)](https://github.com/yourusername/anamavak)
+[![WebSocket](https://img.shields.io/badge/Real--Time-WebSocket-green.svg)](https://socket.io/)
 
-# 🔐 TriCrypt
+> **Advanced Secure Real-Time Messaging System for Local Networks**
 
-**Secure Real-Time Messaging & File Vault with Triple-Layer Encryption**
+ANÄ€MAVÄ€K (pronounced "Anamavak") is a cutting-edge secure messaging application designed for privacy-conscious users who need military-grade encryption for local network communications. Built with Python Flask and featuring a sleek cyberpunk-inspired interface.
 
-![Version](https://img.shields.io/badge/version-3.0-blue.svg)
-![Python](https://img.shields.io/badge/python-3.7%2B-green.svg)
-![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)
+## 🚀 Quick Start
 
----
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/anamavak.git
+cd anamavak
 
-## 📖 Overview
+# Install dependencies
+pip install flask flask-socketio cryptography qrcode[pil]
 
-**TriCrypt** is a privacy-first, real-time communication and file transfer system that leverages:
+# Run the application
+python cybervault_v4.py
+```
 
-* 🔐 **Triple-layer encryption**: Morse Code → AES-256 → HMAC
-* ⚡ **Real-time communication** via WebSockets
-* 🧱 **Zero user accounts**: Just an 11-digit secure key
-* 📂 **Encrypted file vault**
-* 🖥️ **Retro terminal-style web interface**
-* 📱 **Mobile access via QR code**
+**That's it!** The application will automatically:
+- 🌐 Open in your default browser
+- 🔌 Start on port 65222
+- 📱 Display a QR code for mobile access
+- 🔒 Initialize the secure messaging environment
 
 ---
 
 ## ✨ Features
 
-* 🔄 Real-time encrypted messaging
-* 📎 Secure file uploads/downloads (up to 16MB)
-* 🧠 Triple encryption: Morse obfuscation + AES + HMAC
-* 🔑 11-digit numeric access keys
-* 📜 IP/user-agent access logs
-* 📷 QR code terminal output for mobile access
-* 🧬 Session management
+### 🛡️ **Military-Grade Security**
+- **Quadruple-Layer Encryption Pipeline**:
+  1. 📡 Morse code obfuscation
+  2. 🔀 XOR encryption with salted keys  
+  3. 🔐 AES-256-GCM authenticated encryption
+  4. ✅ HMAC-SHA256 integrity verification
+
+- **Advanced Key Derivation**: PBKDF2 with 100,000 iterations
+- **Anti-Brute Force**: 5 attempts per 15 minutes lockout
+- **Rate Limiting**: 100 requests per hour per IP
+- **File Integrity**: SHA-256 hash verification for all uploads
+
+### ⚡ **Real-Time Communication**
+- 🔄 **WebSocket-based** instant messaging
+- 🌐 **Cross-platform** web interface
+- 📱 **Mobile responsive** design
+- 🔌 **Auto-reconnection** with connection monitoring
+- 👥 **Multi-user** support with shared access keys
+
+### 📁 **Secure File Sharing**
+- 📤 **32MB maximum** file size
+- 🔒 **Encrypted file storage** with separate salt
+- 📊 **File metadata** tracking (size, type, upload time)
+- 🗂️ **Multiple file uploads** simultaneously
+- 💾 **Secure download** with integrity verification
+
+### 🎨 **User Experience**
+- 🖥️ **Auto-browser launch** - no manual navigation
+- 🎯 **Default port 65222** - instant setup
+- 📱 **QR code generation** for mobile access
+- ⌨️ **Keyboard shortcuts** (Ctrl+Enter, Escape)
+- 🔢 **Character counter** with visual feedback
+- 🎭 **Clean cyberpunk aesthetic**
 
 ---
 
-## 🧩 Tech Stack
+## 🔧 Installation
 
-* **Python 3.7+**
-* **Flask** + **Flask-SocketIO**
-* **SQLite3**
-* **Cryptography** for AES-256
-* **qrcode** for terminal QR
-* HTML + CSS (Retro UI)
+### Prerequisites
+- Python 3.7 or higher
+- pip package manager
 
----
-
-## 🧰 Installation
-
-### 🪟 Windows
-
+### Dependencies
 ```bash
-git clone https://github.com/yourusername/tricrypt.git
-cd tricrypt
-
-py -m venv venv
-venv\Scripts\activate
-
-pip install -r requirements.txt
-python cybervault_v3.py
+pip install flask flask-socketio cryptography qrcode[pil]
 ```
 
-### 🐧 Linux / macOS
-
+### Optional (for enhanced QR codes)
 ```bash
-git clone https://github.com/yourusername/tricrypt.git
-cd tricrypt
-
-python3 -m venv venv
-source venv/bin/activate
-
-pip install -r requirements.txt
-python3 cybervault_v3.py
+pip install pillow
 ```
 
-### 🤖 Android (via Termux)
+---
 
+## 📖 Usage Guide
+
+### 🔑 **Authentication**
+1. Launch the application: `python cybervault_v4.py`
+2. Browser opens automatically to the welcome screen
+3. Click the logo **7 times** to reveal the access form
+4. Enter your **11-digit numeric key** (e.g., `12345678901`)
+5. Click "ACCESS VAULT" to enter the secure environment
+
+### 💬 **Messaging**
+- Type messages in the input area
+- Press **Enter** or click "SEND MSG" to encrypt and send
+- Messages are encrypted with quadruple-layer protection
+- Real-time delivery to all users with the same access key
+- **Ctrl+Enter** for quick send, **Escape** to clear
+
+### 📁 **File Sharing**
+- Click "UPLOAD FILE" in the right panel
+- Select one or multiple files (max 32MB each)
+- Files are automatically encrypted and stored securely
+- Click any file in the list to download and decrypt
+- File integrity is verified on every download
+
+### 🌐 **Network Access**
+- **Local**: `http://127.0.0.1:65222`
+- **Network**: `http://[YOUR_LOCAL_IP]:65222`
+- **Mobile**: Scan the QR code displayed at startup
+
+---
+
+## 🔐 Security Architecture
+
+### Encryption Pipeline
+```
+Original Message
+       ↓
+1. Morse Code Obfuscation
+       ↓
+2. XOR Encryption (Salted Key)
+       ↓
+3. AES-256-GCM (PBKDF2 Derived Key)
+       ↓
+4. HMAC-SHA256 Integrity Check
+       ↓
+   Encrypted Package
+```
+
+### Key Features
+- **Zero Knowledge**: Server cannot decrypt messages without user keys
+- **Perfect Forward Secrecy**: Each message uses unique encryption parameters
+- **Authenticated Encryption**: Built-in tamper detection
+- **Brute Force Resistant**: Advanced rate limiting and attempt tracking
+
+---
+
+## 🏗️ Architecture
+
+```
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   Web Client    │◄──►│  Flask Server    │◄──►│   SQLite DB     │
+│  (Browser/Mobile)│    │  + SocketIO      │    │  (Encrypted)    │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+         │                        │
+         │              ┌──────────────────┐
+         └──────────────►│  Crypto Engine   │
+                        │ (4-Layer Encrypt) │
+                        └──────────────────┘
+```
+
+### Components
+- **Flask**: Web framework and REST API
+- **SocketIO**: Real-time WebSocket communication  
+- **SQLite**: Encrypted local database storage
+- **Cryptography**: AES-256-GCM and PBKDF2 implementation
+- **QR Code**: Mobile access convenience
+
+---
+
+## ⚙️ Configuration
+
+### Environment Variables
 ```bash
-pkg install git python
-git clone https://github.com/yourusername/tricrypt.git
-cd tricrypt
-
-pip install -r requirements.txt
-python cybervault_v3.py
+export ANAMAVAK_PORT=65222          # Default port
+export ANAMAVAK_MAX_FILE_SIZE=32    # Max file size in MB
+export ANAMAVAK_SESSION_TIMEOUT=24  # Session timeout in hours
 ```
 
-> 🔸 Use `termux-open-url` or a mobile browser to access the local IP shown with the QR code.
+### Security Settings
+- **Rate Limit**: 100 requests/hour per IP
+- **Brute Force**: 5 failed attempts = 15min lockout
+- **Session Timeout**: 24 hours of inactivity
+- **File Size Limit**: 32MB per file
+- **Message Limit**: 2000 characters per message
 
 ---
 
-## 🚀 Starting the App
+## 🔒 Security Considerations
 
+### ✅ **Best Practices**
+- Use **strong 11-digit keys** (avoid sequential numbers)
+- Run on **isolated local networks** only
+- **Regular key rotation** for long-term use
+- **Monitor access logs** for suspicious activity
+- **Secure physical access** to the server machine
+
+### ⚠️ **Important Notes**
+- This is designed for **local network use only**
+- **Do not expose** to the public internet without additional security layers
+- **Access keys are shared** - anyone with the key can read messages
+- **Messages are stored locally** in encrypted SQLite database
+- **No cloud backup** - data is only on the local machine
+
+### 🛡️ **Security Features**
+- **End-to-end encryption** with zero server knowledge
+- **Memory-safe** key handling
+- **Secure session management**
+- **Comprehensive audit logging**
+- **Tamper-evident** file storage
+
+---
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Port Already in Use**
 ```bash
-python cybervault_v3.py
+# Check what's using the port
+netstat -tulpn | grep 65222
+
+# Kill the process or use a different port
+python cybervault_v4.py  # Then enter a different port
 ```
 
-You will be prompted to enter a **custom port** (press Enter for default: `5000`).
-The terminal will then display:
+**Browser Doesn't Open**
+- Manually navigate to `http://127.0.0.1:65222`
+- Check firewall settings
+- Try a different browser
 
-* Localhost URL
-* Network URL (for LAN access)
-* 📱 QR code for quick mobile connection
+**Can't Connect from Mobile**
+- Ensure devices are on the same network
+- Check firewall allows incoming connections
+- Verify the IP address in the QR code
 
----
-
-## 🧭 How to Use TriCrypt (Visual Guide)
-
-> 📂 Ensure the following images are located in your `docs/` folder:
-
-| Step | Screenshot              | Filename          |
-| ---- | ----------------------- | ----------------- |
-| 1    | Starting the Server     | `start.png`       |
-| 2    | Home Screen             | `homescreen.png`  |
-| 3    | Entering the Secret Key | `secret_key.png`  |
-| 4    | Messaging Interface     | `interface.png`   |
-| 5    | Uploading Files         | `file_upload.png` |
-| 6    | Logging Out             | `logout.png`      |
+**Authentication Fails**
+- Ensure key is exactly 11 digits
+- Check for rate limiting (wait 15 minutes)
+- Verify no typos in the access key
 
 ---
 
-### 🧷 Step 1: Start the Server
+## 🔄 Changelog
 
-Run the server and choose your port (e.g., `8899`).
+### v4.0 (Current)
+- ✨ **NEW**: Quadruple-layer encryption system
+- ✨ **NEW**: Auto-browser launch functionality
+- ✨ **NEW**: Advanced brute force protection
+- ✨ **NEW**: Rate limiting system
+- ✨ **NEW**: Enhanced file integrity verification
+- ✨ **NEW**: PBKDF2 key derivation
+- ✨ **NEW**: Default port 65222
+- 🔧 **IMPROVED**: File size limit increased to 32MB
+- 🔧 **IMPROVED**: Better WebSocket connection handling
+- 🔧 **IMPROVED**: Enhanced session management
+- 🐛 **FIXED**: Authentication flow issues
+- 🐛 **FIXED**: Mobile responsiveness
 
-```bash
-python cybervault_v3.py
-```
-
-You'll see network URLs and a QR code for mobile access.
-
-![Start Server](docs/Start.png)
-
----
-
-### 🏠 Step 2: Home Screen
-
-Open your browser to `http://127.0.0.1:PORT` or your LAN IP.
-
-Click the **ANĀMAVĀK** logo **7 times** to unlock the secret key panel.
-
-![Home Screen](docs/Homescreen.png)
-
----
-
-### 🔑 Step 3: Enter Your Secret Key
-
-Enter your **11-digit numeric key** (e.g., `12345678901`).
-This is your **vault identifier and encryption key** — it must be the same across devices.
-
-![Secret Key Entry](docs/Secretkey.png)
-
----
-
-### 💬 Step 4: Real-Time Messaging Interface
-
-You're now inside your encrypted vault. Start messaging in real-time!
-
-* Messages are encrypted using your 11-digit key.
-* Only users with the **same key** can view or send messages.
-
-![Interface](docs/Interface.png)
-
----
-
-### 📁 Step 5: Upload a File
-
-Use the right panel to **upload files** (max: 16MB).
-Files are encrypted with AES-256 and stored securely.
-
-* Click on files to download.
-* Decryption happens locally with your vault key.
-
-![File Upload](docs/Fileupload.png)
-
----
-
-### 🔓 Step 6: Logout
-
-Click **EXIT** in the top-right corner to logout.
-This ends the session and clears the key from memory.
-
-![Logout](docs/Logout.png)
-
----
-
-## 🔐 Encryption Model
-
-```text
-Plain Text
-   ↓
-Morse Code (Obfuscation)
-   ↓
-AES-256 Encryption (Key from 11-digit code)
-   ↓
-HMAC-SHA256 Integrity Check
-```
-
-All encryption happens before any transmission or storage.
-
----
-
-## 📱 Mobile Access
-
-Scan the terminal QR code with your phone.
-Use your browser to open the vault and input your 11-digit key.
-Enjoy full access to messaging and files.
+### v3.0 (Previous)
+- Triple-layer encryption (Morse + AES-256-CBC + HMAC)
+- Basic real-time messaging
+- File upload/download
+- Simple session management
+- Manual browser navigation
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests welcome!
+We welcome contributions! Please follow these guidelines:
 
-### Format code:
+1. **Fork** the repository
+2. Create a **feature branch**: `git checkout -b feature/amazing-feature`
+3. **Commit** your changes: `git commit -m 'Add amazing feature'`
+4. **Push** to the branch: `git push origin feature/amazing-feature`
+5. Open a **Pull Request**
 
+### Development Setup
 ```bash
-black cybervault_v3.py
-```
+# Clone your fork
+git clone https://github.com/yourusername/anamavak.git
+cd anamavak
 
-### Run the app:
+# Install development dependencies
+pip install -r requirements.txt
 
-```bash
-python cybervault_v3.py
+# Run tests (if available)
+python -m pytest tests/
+
+# Start development server
+python cybervault_v4.py
 ```
 
 ---
 
-## 📜 License
+## 📄 License
 
-MIT License © 2025 \[Your Name]
-TriCrypt — **Silence. Secured.**
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
+
+## ⚠️ Disclaimer
+
+This software is provided for **educational and legitimate use only**. Users are responsible for compliance with local laws and regulations. The authors are not responsible for any misuse of this software.
+
+**Use responsibly and ethically.**
+
+---
+
+## 🙏 Acknowledgments
+
+- **Cryptography Library**: For robust encryption primitives
+- **Flask & SocketIO**: For the web framework and real-time communication
+- **QR Code Library**: For mobile access convenience
+- **Courier Prime Font**: For the authentic terminal aesthetic
+
+---
+
+## 📞 Support
+
+- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/anamavak/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/anamavak/discussions)
+- 📧 **Security**: For security-related issues, please email security@yourdomain.com
+
+---
+
+## 🌟 Star This Project
+
+If you find ANÄ€MAVÄ€K useful, please consider giving it a star ⭐ on GitHub!
+
+---
+
+<div align="center">
+
+**ANÄ€MAVÄ€K v4.0** - *Secure communications for the modern age*
+
+Made with ❤️ for privacy and security
+
+[⬆️ Back to Top](#anÄ€mavÄ€k-v40-)
+
+</div>
